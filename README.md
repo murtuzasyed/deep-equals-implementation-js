@@ -1,5 +1,5 @@
 # deep-equals-implementation-js
-Sequence/algorithm to follow when implementing deepEquals of two values
+Common interview questions asked for a FE role. This readme contains sequence/algorithm to follow when implementing `deepEquals` of two values
 
 ## Steps
 ### Check for primitives(Numbers, Strings, NaN too)
