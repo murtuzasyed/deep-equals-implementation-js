@@ -3,9 +3,12 @@ Common interview questions asked for a FE role. This readme contains sequence/al
 
 ## Steps
 ### Check for primitives(Numbers, Strings, NaN too)
-- Check if either of the value is not an object using `typeof !=="object"` or the either of the value is not null. 
+- Check if either of the value is not an object using `typeof !=="object"`. 
 - If true, then use `Object.is` to compare both the values.
-- `Object.is` covers edge cases like comparing `NaN`, null, undefined, +1 and -1. Using Object.is helps in reducing checks for null equality, type checks and much more. More details can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is).
+- `Object.is` covers edge cases like comparing `NaN`, undefined, +1 and -1
+### Check for null equality
+- Check if either value is null then both are equal
+
 ### Check for Arrays
 - Check if both the parameters are arrays using `Array.isArray`.
 - If both are arrays, check for length.
