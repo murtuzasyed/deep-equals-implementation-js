@@ -1,10 +1,15 @@
 function deepEqual(valueA, valueB) {
- 
+  
+  // Check for type equality
+  if(typeof valueA !== typeof valueB) return false;
   // Check for Primitives
-  // Note: Object.is is handy for checking primitives including NaN, -0 & +0
-  if(typeof valueA !== 'object' || valueA === null) {    
+  // Note: Object.is is handy for checking primitives and covers NaN
+  if(typeof valueA !== 'object') {    
     return Object.is(valueA, valueB);
   }
+ 
+  // Check for null equality
+  if(valueA === null || valueB===null) return valueA === valueB
 
   // Check for both to be arrays
   if(Array.isArray(valueA) && Array.isArray(valueB)) {
